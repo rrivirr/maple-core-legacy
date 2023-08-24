@@ -89,7 +89,7 @@ namespace wirish {
 
         __weak void board_setup_usb(void) {
 #ifdef SERIAL_USB 
-			Serial.begin();// Roger Clark. Changed SerialUSB to Serial for Arduino sketch compatibility
+			// Serial.begin();// Roger Clark. Changed SerialUSB to Serial for Arduino sketch compatibility
 #endif
 		}
 

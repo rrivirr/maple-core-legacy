@@ -141,7 +141,8 @@ mapleRET6.vid.0=0x1EAF
 mapleRET6.pid.0=0x0004
 mapleRET6.build.board=MAPLE_RET6
 mapleRET6.build.core=maple
-mapleRET6.build.cpu_flags=-DMCU_STM32F103RE -DSERIAL_USB
+mapleRET6.build.cpu_flags=-DMCU_STM32F103RE 
+#-DSERIAL_USB
 
 mapleRET6.build.ldscript=ld/stm32f103re-bootloader.ld
 mapleRET6.build.variant=maple_ret6
