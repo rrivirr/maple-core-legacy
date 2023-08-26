@@ -139,7 +139,7 @@ bool boardUsesPin(uint8 pin);
 /** Feature test: nonzero iff the board has USART1. */
 #define BOARD_HAVE_USART1               BOARD_HAVE_USART(1)
 /** Feature test: nonzero iff the board has USART2, 0 otherwise. */
-#define BOARD_HAVE_USART2               BOARD_HAVE_USART(2)
+#define BOARD_HAVE_USART2               BOARD_HAVE_USART(0)
 /** Feature test: nonzero iff the board has USART3, 0 otherwise. */
 #define BOARD_HAVE_USART3               BOARD_HAVE_USART(3)
 /** Feature test: nonzero iff the board has UART4, 0 otherwise. */
