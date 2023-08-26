@@ -261,7 +261,7 @@ extern usart_dev uart4;
 extern usart_dev uart5;
 extern usart_dev usart6;
 #define USART1 (&usart1)
-#define USART2 (&usart2)
+// #define USART2 (&usart2)
 #define USART3 (&usart3)
 #define UART4  (&uart4)
 #define UART5  (&uart5)

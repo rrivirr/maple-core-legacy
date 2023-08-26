@@ -53,16 +53,16 @@ static usart_dev usart1 = {
 /** USART1 device */
 usart_dev *USART1 = &usart1;
 
-static ring_buffer usart2_rb;
-static ring_buffer usart2_wb;
-static usart_dev usart2 = {
-    .regs     = USART2_BASE,
-    .rb       = &usart2_rb,
-    .wb       = &usart2_wb,
-    .max_baud = 2250000UL,
-    .clk_id   = RCC_USART2,
-    .irq_num  = NVIC_USART2,
-};
+// static ring_buffer usart2_rb;
+// static ring_buffer usart2_wb;
+// static usart_dev usart2 = {
+//     .regs     = USART2_BASE,
+//     .rb       = &usart2_rb,
+//     .wb       = &usart2_wb,
+//     .max_baud = 2250000UL,
+//     .clk_id   = RCC_USART2,
+//     .irq_num  = NVIC_USART2,
+// };
 /** USART2 device */
 //usart_dev *USART2 = &usart2;
 
@@ -205,7 +205,7 @@ __weak void __irq_usart1(void) {
 }
 
 __weak void __irq_usart2(void) {
-    usart_irq(&usart2_rb, &usart2_wb, USART2_BASE);
+    // usart_irq(&usart2_rb, &usart2_wb, USART2_BASE);
 }
 
 __weak void __irq_usart3(void) {
