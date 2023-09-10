@@ -31,17 +31,17 @@
  */
 
 #include "libmaple.h"
-#include "usart.h"
+// #include "usart.h"
 #include "gpio.h"
 #include "nvic.h"
 #include "adc.h"
 #include "timer.h"
 
 /* Failed ASSERT()s send out a message using this USART config. */
-#ifndef ERROR_USART
-#define ERROR_USART            USART2
-#define ERROR_USART_CLK_SPEED  STM32_PCLK1
-#define ERROR_USART_BAUD       115200
+// #ifndef ERROR_USART
+// #define ERROR_USART            USART2
+// #define ERROR_USART_CLK_SPEED  STM32_PCLK1
+// #define ERROR_USART_BAUD       115200
 #define ERROR_TX_PORT          GPIOA
 #define ERROR_TX_PIN           2
 #endif
@@ -57,10 +57,10 @@
 /* (Called from exc.S with global interrupts disabled.) */
 void __error(int num) {
     nvic_globalirq_enable();
-    usart_putstr(ERROR_USART, "\r\nexception: ");
-    usart_putudec(ERROR_USART, num);
-    usart_putc(ERROR_USART, '\n');
-    usart_putc(ERROR_USART, '\r');
+    // usart_putstr(ERROR_USART, "\r\nexception: ");
+    // usart_putudec(ERROR_USART, num);
+    // usart_putc(ERROR_USART, '\n');
+    // usart_putc(ERROR_USART, '\r');
 	for(;;);
     throb();
 	
@@ -74,7 +74,7 @@ void __error(int num) {
     adc_disable_all();
 
     /* Turn off all USARTs */
-    usart_disable_all();
+    // usart_disable_all();
 
     /* Turn the USB interrupt back on so the bootloader keeps on functioning */
     nvic_irq_enable(NVIC_USB_FS);
@@ -97,17 +97,17 @@ void _fail(const char* file, int line, const char* exp) {
     //gpio_set_mode(ERROR_TX_PORT, ERROR_TX_PIN, GPIO_AF_OUTPUT_PP);
     //usart_init(ERROR_USART);
     //usart_set_baud_rate(ERROR_USART, ERROR_USART_CLK_SPEED, ERROR_USART_BAUD);
-    usart_set_baud_rate(ERROR_USART, ERROR_USART_BAUD);
+    // usart_set_baud_rate(ERROR_USART, ERROR_USART_BAUD);
 
-    /* Print failed assert message */
-    usart_putstr(ERROR_USART, "ERROR: FAILED ASSERT(");
-    usart_putstr(ERROR_USART, exp);
-    usart_putstr(ERROR_USART, "): ");
-    usart_putstr(ERROR_USART, file);
-    usart_putstr(ERROR_USART, ": ");
-    usart_putudec(ERROR_USART, line);
-    usart_putc(ERROR_USART, '\n');
-    usart_putc(ERROR_USART, '\r');
+    // /* Print failed assert message */
+    // usart_putstr(ERROR_USART, "ERROR: FAILED ASSERT(");
+    // usart_putstr(ERROR_USART, exp);
+    // usart_putstr(ERROR_USART, "): ");
+    // usart_putstr(ERROR_USART, file);
+    // usart_putstr(ERROR_USART, ": ");
+    // usart_putudec(ERROR_USART, line);
+    // usart_putc(ERROR_USART, '\n');
+    // usart_putc(ERROR_USART, '\r');
 
     /* Error fade */
     __error(-1);

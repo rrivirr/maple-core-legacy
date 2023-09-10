@@ -24,8 +24,8 @@ cSRCS_$(d) += rcc.c
 cSRCS_$(d) += spi.c
 cSRCS_$(d) += systick.c
 cSRCS_$(d) += timer.c
-cSRCS_$(d) += usart.c
-cSRCS_$(d) += usart_private.c
+# cSRCS_$(d) += usart.c
+# cSRCS_$(d) += usart_private.c
 cSRCS_$(d) += util.c
 sSRCS_$(d) := exc.S
 # I2C support must be ported to F2:

@@ -31,7 +31,7 @@
  */
 
 #include <libmaple/libmaple.h>
-#include <libmaple/usart.h>
+// #include <libmaple/usart.h>
 #include <libmaple/gpio.h>
 #include <libmaple/nvic.h>
 

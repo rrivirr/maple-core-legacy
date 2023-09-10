@@ -83,7 +83,7 @@ def process_usb_configuration(cpp_defines):
     if "ENABLE_USB_MASS_STORAGE" in cpp_defines:
         env.Append(CPPDEFINES=["USB_MSC"])
     elif "ENABLE_USB_SERIAL" in cpp_defines:
-        env.Append(CPPDEFINES=["SERIAL_USB"])
+        # env.Append(CPPDEFINES=["SERIAL_USB"])
     else:
         # USB is disabled by default
         env.Append(CPPDEFINES=["USB_NC"])

@@ -66,9 +66,9 @@
 //#include <HardwareSPI.h>
 #endif
 
-#include <HardwareSerial.h>
+// #include <HardwareSerial.h>
 #include <HardwareTimer.h>
-#include <usb_serial.h>
+// #include <usb_serial.h>
 #include <wirish_types.h>
 
 #include <libmaple/libmaple.h>

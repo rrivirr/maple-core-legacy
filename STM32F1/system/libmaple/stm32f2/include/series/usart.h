@@ -34,29 +34,30 @@
 #define _LIBMAPLE_STM32F2_USART_H_
 
 #ifdef __cplusplus
-extern "C"{
+extern "C"
+{
 #endif
 
-#include <libmaple/gpio.h>      /* for gpio_af */
+#include <libmaple/gpio.h> /* for gpio_af */
 
-/*
- * Register map base pointers.
- */
+    /*
+     * Register map base pointers.
+     */
 
-struct usart_reg_map;
+    struct usart_reg_map;
 
 /** USART1 register map base pointer */
-#define USART1_BASE                     ((struct usart_reg_map*)0x40011000)
+#define USART1_BASE ((struct usart_reg_map *)0x40011000)
 /** USART2 register map base pointer */
-#define USART2_BASE                     ((struct usart_reg_map*)0x40004400)
+#define USART2_BASE ((struct usart_reg_map *)0x40004400)
 /** USART3 register map base pointer */
-#define USART3_BASE                     ((struct usart_reg_map*)0x40004800)
+#define USART3_BASE ((struct usart_reg_map *)0x40004800)
 /** UART4 register map base pointer */
-#define UART4_BASE                      ((struct usart_reg_map*)0x40004C00)
+#define UART4_BASE ((struct usart_reg_map *)0x40004C00)
 /** UART5 register map base pointer */
-#define UART5_BASE                      ((struct usart_reg_map*)0x40005000)
+#define UART5_BASE ((struct usart_reg_map *)0x40005000)
 /** USART6 register map base pointer */
-#define USART6_BASE                     ((struct usart_reg_map*)0x40011400)
+#define USART6_BASE ((struct usart_reg_map *)0x40011400)
 
 /*
  * F2-only register bit definitions.
@@ -67,42 +68,42 @@ struct usart_reg_map;
 /**
  * @brief Oversampling mode bit.
  * Availability: STM32F2. */
-#define USART_CR1_OVER8_BIT             15
+#define USART_CR1_OVER8_BIT 15
 
 /**
  * @brief Oversampling mode.
  * Availability: STM32F2. */
-#define USART_CR1_OVER8                 (1U << USART_CR1_OVER8_BIT)
+#define USART_CR1_OVER8 (1U << USART_CR1_OVER8_BIT)
 
 /* Control register 3 */
 
 /** One sample bit method enable bit. */
-#define USART_CR3_ONEBIT_BIT            11
+#define USART_CR3_ONEBIT_BIT 11
 
 /** One bit sample method enable. */
-#define USART_CR3_ONEBIT                (1 << USART_CR3_ONEBIT_BIT)
+#define USART_CR3_ONEBIT (1 << USART_CR3_ONEBIT_BIT)
 /** Sample method: Three sample bit method. */
-#define USART_CR3_ONEBIT_3SAMPLE        (0 << USART_CR3_ONEBIT_BIT)
+#define USART_CR3_ONEBIT_3SAMPLE (0 << USART_CR3_ONEBIT_BIT)
 /** Sample method: One sample bit method. */
-#define USART_CR3_ONEBIT_1SAMPLE        (1 << USART_CR3_ONEBIT_BIT)
+#define USART_CR3_ONEBIT_1SAMPLE (1 << USART_CR3_ONEBIT_BIT)
 
-/*
- * Devices
- */
+    /*
+     * Devices
+     */
 
-struct usart_dev;
-extern struct usart_dev *USART1;
-extern struct usart_dev *USART2;
-extern struct usart_dev *USART3;
-extern struct usart_dev *UART4;
-extern struct usart_dev *UART5;
-extern struct usart_dev *USART6;
+    struct usart_dev;
+    extern struct usart_dev *USART1;
+    // extern struct usart_dev *USART2;
+    extern struct usart_dev *USART3;
+    extern struct usart_dev *UART4;
+    extern struct usart_dev *UART5;
+    extern struct usart_dev *USART6;
 
-/*
- * Routines
- */
+    /*
+     * Routines
+     */
 
-gpio_af usart_get_af(struct usart_dev *dev);
+    gpio_af usart_get_af(struct usart_dev *dev);
 
 #ifdef __cplusplus
 }

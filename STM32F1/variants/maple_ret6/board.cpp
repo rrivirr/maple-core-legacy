@@ -33,8 +33,8 @@
 #include <board/board.h>         // For this board's header file
 
 /* Roger Clark. Added next to includes for changes to Serial */
-#include <libmaple/usart.h>
-#include <HardwareSerial.h>
+// #include <libmaple/usart.h>
+// #include <HardwareSerial.h>
 
 #include <wirish_types.h> // For stm32_pin_info and its contents
                                  // (these go into PIN_MAP).
@@ -135,8 +135,8 @@ extern const stm32_pin_info PIN_MAP[BOARD_NR_GPIO_PINS] = {
 	{ &gpiob, NULL, NULL, 3, 0, ADCx }, /* D42/PB3  */
 	{ &gpiob, NULL, NULL, 4, 0, ADCx }, /* D43/PB4  */
 
-	{ &gpioc, NULL, NULL, 11, 0, ADCx }, /* D44/PC11 UART4_RX/SDIO_D3 */
-	{ &gpioc, NULL, NULL, 12, 0, ADCx }, /* D45/PC12 UART5_TX/SDIO_CK */
+	// { &gpioc, NULL, NULL, 11, 0, ADCx }, /* D44/PC11 UART4_RX/SDIO_D3 */
+	// { &gpioc, NULL, NULL, 12, 0, ADCx }, /* D45/PC12 UART5_TX/SDIO_CK */
 
 	{ &gpiod, NULL, NULL, 0, 0, ADCx }, /* PD0 OSC_IN */
 	{ &gpiod, NULL, NULL, 1, 0, ADCx }, /* PD1  OSC_OUT */
@@ -170,8 +170,8 @@ extern const uint8 boardUsedPins[BOARD_NR_USED_PINS] __FLASH__ = {
  * Note. Maple Ret always has SERIAL USB, so there is no need for the #fidef for this
  * As its a High Density device (F103RE), it has 6 hardware serial devices. 
  */		
-DEFINE_HWSERIAL(Serial1, 1);
-DEFINE_HWSERIAL(Serial2, 2);
-DEFINE_HWSERIAL(Serial3, 3);
-DEFINE_HWSERIAL_UART(Serial4, 4);
-DEFINE_HWSERIAL_UART(Serial5, 5);
+// DEFINE_HWSERIAL(Serial1, 1);
+// DEFINE_HWSERIAL(Serial2, 2);
+// DEFINE_HWSERIAL(Serial3, 3);
+// DEFINE_HWSERIAL_UART(Serial4, 4);
+// DEFINE_HWSERIAL_UART(Serial5, 5);

@@ -66,13 +66,13 @@ void init(void)
 {
     setup_flash();
     setup_clocks();
-    // setup_nvic();
+    setup_nvic();
     systick_init(SYSTICK_RELOAD_VAL);
-    wirish::priv::board_setup_gpio();
+    // wirish::priv::board_setup_gpio();
     setup_adcs();
     setup_timers();
     // wirish::priv::board_setup_usb();
-    // wirish::priv::series_init();
+    wirish::priv::series_init();
     // boardInit();
 }
 

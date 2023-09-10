@@ -32,7 +32,7 @@
 
 #ifndef _BOARD_MAPLE_H_
 #define _BOARD_MAPLE_H_
-#define _BOARD_NUCLEOF103RB_ 1 // hack for HardwareSerial.cpp for a new order of serials
+// #define _BOARD_NUCLEOF103RB_ 1 // hack for HardwareSerial.cpp for a new order of serials
 #define CYCLES_PER_MICROSECOND	(F_CPU / 1000000U)
 #define SYSTICK_RELOAD_VAL     (F_CPU/1000) - 1 /* takes a cycle to reload */
 
@@ -54,21 +54,21 @@
  #define BOARD_I2CSOFT_SCL_PIN     PC0
  #define BOARD_I2CSOFT_SDA_PIN     PC1
 
-#define BOARD_NR_USARTS         3
+// #define BOARD_NR_USARTS         3
 //#define SERIAL_ORDER1     3 // HW Serial order for custom boards
 //#define SERIAL_ORDER2      2 // not implemented yet
 //#define SERIAL_ORDER3      1
 
 /* Number of USARTs/UARTs whose pins are broken out to headers. */
 // hope this would be obsolet soon
-#define BOARD_USART1_TX_PIN     PA9
-#define BOARD_USART1_RX_PIN     PA10
+// #define BOARD_USART1_TX_PIN     PA9
+// #define BOARD_USART1_RX_PIN     PA10
 
-#define BOARD_USART2_TX_PIN     PA2
-#define BOARD_USART2_RX_PIN     PA3
+// #define BOARD_USART2_TX_PIN     PA2
+// #define BOARD_USART2_RX_PIN     PA3
 
-#define BOARD_USART3_TX_PIN     PC10
-#define BOARD_USART3_RX_PIN     PC11
+// #define BOARD_USART3_TX_PIN     PC10
+// #define BOARD_USART3_RX_PIN     PC11
 
 /* Number of SPI ports broken out to headers. */
 #define BOARD_NR_SPI            2

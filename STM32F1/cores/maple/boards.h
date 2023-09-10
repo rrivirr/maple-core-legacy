@@ -42,15 +42,121 @@
  * that we use the Dx convention since all of the Maple's pins are
  * "digital" pins (e.g. can be used with digitalRead() and
  * digitalWrite()), but not all of them are connected to ADCs. */
-enum {
-    D0, D1, D2, D3, D4, D5, D6, D7, D8, D9, D10, D11, D12, D13, D14, D15, D16,
-    D17, D18, D19, D20, D21, D22, D23, D24, D25, D26, D27, D28, D29, D30, D31,
-    D32, D33, D34, D35, D36, D37, D38, D39, D40, D41, D42, D43, D44, D45, D46,
-    D47, D48, D49, D50, D51, D52, D53, D54, D55, D56, D57, D58, D59, D60, D61,
-    D62, D63, D64, D65, D66, D67, D68, D69, D70, D71, D72, D73, D74, D75, D76,
-    D77, D78, D79, D80, D81, D82, D83, D84, D85, D86, D87, D88, D89, D90, D91,
-    D92, D93, D94, D95, D96, D97, D98, D99, D100, D101, D102, D103, D104, D105,
-    D106, D107, D108, D109, D110, D111, };
+enum
+{
+    D0,
+    D1,
+    D2,
+    D3,
+    D4,
+    D5,
+    D6,
+    D7,
+    D8,
+    D9,
+    D10,
+    D11,
+    D12,
+    D13,
+    D14,
+    D15,
+    D16,
+    D17,
+    D18,
+    D19,
+    D20,
+    D21,
+    D22,
+    D23,
+    D24,
+    D25,
+    D26,
+    D27,
+    D28,
+    D29,
+    D30,
+    D31,
+    D32,
+    D33,
+    D34,
+    D35,
+    D36,
+    D37,
+    D38,
+    D39,
+    D40,
+    D41,
+    D42,
+    D43,
+    D44,
+    D45,
+    D46,
+    D47,
+    D48,
+    D49,
+    D50,
+    D51,
+    D52,
+    D53,
+    D54,
+    D55,
+    D56,
+    D57,
+    D58,
+    D59,
+    D60,
+    D61,
+    D62,
+    D63,
+    D64,
+    D65,
+    D66,
+    D67,
+    D68,
+    D69,
+    D70,
+    D71,
+    D72,
+    D73,
+    D74,
+    D75,
+    D76,
+    D77,
+    D78,
+    D79,
+    D80,
+    D81,
+    D82,
+    D83,
+    D84,
+    D85,
+    D86,
+    D87,
+    D88,
+    D89,
+    D90,
+    D91,
+    D92,
+    D93,
+    D94,
+    D95,
+    D96,
+    D97,
+    D98,
+    D99,
+    D100,
+    D101,
+    D102,
+    D103,
+    D104,
+    D105,
+    D106,
+    D107,
+    D108,
+    D109,
+    D110,
+    D111,
+};
 
 /**
  * @brief Maps each Maple pin to a corresponding stm32_pin_info.
@@ -114,18 +220,18 @@ bool boardUsesPin(uint8 pin);
  * Derived and default board definitions
  */
 
-#define CLOCK_SPEED_MHZ                 CYCLES_PER_MICROSECOND
-#define CLOCK_SPEED_HZ                  (CLOCK_SPEED_MHZ * 1000000UL)
+#define CLOCK_SPEED_MHZ CYCLES_PER_MICROSECOND
+#define CLOCK_SPEED_HZ (CLOCK_SPEED_MHZ * 1000000UL)
 
 #ifndef SYSTICK_RELOAD_VAL
-#define SYSTICK_RELOAD_VAL              (1000 * CYCLES_PER_MICROSECOND - 1)
+#define SYSTICK_RELOAD_VAL (1000 * CYCLES_PER_MICROSECOND - 1)
 #endif
 
 #ifndef BOARD_BUTTON_PRESSED_LEVEL
-#define BOARD_BUTTON_PRESSED_LEVEL      HIGH
+#define BOARD_BUTTON_PRESSED_LEVEL HIGH
 #endif
 
-#include "series/usart.h"
+// #include "series/usart.h"
 
 /**
  * @brief Does the board break out a USART/UART's RX and TX pins?
@@ -134,20 +240,20 @@ bool boardUsesPin(uint8 pin);
  * an integer literal, 1 through 6). Also see BOARD_HAVE_USART1, ...,
  * BOARD_HAVE_UART4 (sic), etc.
  */
-#define BOARD_HAVE_USART(n) (defined(BOARD_USART##n##_TX_PIN) && \
-                             defined(BOARD_USART##n##_RX_PIN))
+// #define BOARD_HAVE_USART(n) (defined(BOARD_USART##n##_TX_PIN) && \
+//                              defined(BOARD_USART##n##_RX_PIN))
 /** Feature test: nonzero iff the board has USART1. */
-#define BOARD_HAVE_USART1               BOARD_HAVE_USART(1)
+// #define BOARD_HAVE_USART1               BOARD_HAVE_USART(1)
 /** Feature test: nonzero iff the board has USART2, 0 otherwise. */
-#define BOARD_HAVE_USART2               BOARD_HAVE_USART(0)
+// #define BOARD_HAVE_USART2               BOARD_HAVE_USART(0)
 /** Feature test: nonzero iff the board has USART3, 0 otherwise. */
-#define BOARD_HAVE_USART3               BOARD_HAVE_USART(3)
+// #define BOARD_HAVE_USART3               BOARD_HAVE_USART(3)
 /** Feature test: nonzero iff the board has UART4, 0 otherwise. */
-#define BOARD_HAVE_UART4                BOARD_HAVE_USART(4)
+// #define BOARD_HAVE_UART4                BOARD_HAVE_USART(4)
 /** Feature test: nonzero iff the board has UART5, 0 otherwise. */
-#define BOARD_HAVE_UART5                BOARD_HAVE_USART(5)
+// #define BOARD_HAVE_UART5                BOARD_HAVE_USART(5)
 /** Feature test: nonzero iff the board has USART6, 0 otherwise. */
-#define BOARD_HAVE_USART6               BOARD_HAVE_USART(6)
+// #define BOARD_HAVE_USART6               BOARD_HAVE_USART(6)
 
 /**
  * @brief Does the board break out a SPI peripheral's pins?
@@ -155,9 +261,9 @@ bool boardUsesPin(uint8 pin);
  * BOARD_HAVE_SPI(n) is nonzero iff SPIn is available (n must be an
  * integer literal: 1, 2, or 3). Also see BOARD_HAVE_SPI1,
  * BOARD_HAVE_SPI2, BOARD_HAVE_SPI3. */
-#define BOARD_HAVE_SPI(n) (defined(BOARD_SPI##n##_NSS_PIN)  &&          \
-                           defined(BOARD_SPI##n##_SCK_PIN)  &&          \
-                           defined(BOARD_SPI##n##_MISO_PIN) &&          \
+#define BOARD_HAVE_SPI(n) (defined(BOARD_SPI##n##_NSS_PIN) &&  \
+                           defined(BOARD_SPI##n##_SCK_PIN) &&  \
+                           defined(BOARD_SPI##n##_MISO_PIN) && \
                            defined(BOARD_SPI##n##_MOSI_PIN))
 /** Feature test: nonzero iff the board has SPI1. */
 #define BOARD_HAVE_SPI1 BOARD_HAVE_SPI(1)
@@ -169,7 +275,7 @@ bool boardUsesPin(uint8 pin);
 /**
  * @brief Feature test: nonzero iff the board has SerialUSB.
  */
- //Roger Clark. Change so that BOARD_HAVE_SERIALUSB is always true, so that it can be controller by -DSERIAL_USB
+// Roger Clark. Change so that BOARD_HAVE_SERIALUSB is always true, so that it can be controller by  
 #define BOARD_HAVE_SERIALUSB 1
 
 /*(defined(BOARD_USB_DISC_DEV) && defined(BOARD_USB_DISC_BIT))*/
