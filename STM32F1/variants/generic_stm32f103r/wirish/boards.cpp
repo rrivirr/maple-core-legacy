@@ -65,7 +65,7 @@ static void setup_timers(void);
 void init(void)
 {
     setup_flash();
-    setup_clocks();
+    // setup_clocks();
     setup_nvic();
     systick_init(SYSTICK_RELOAD_VAL);
     // wirish::priv::board_setup_gpio();
@@ -164,23 +164,22 @@ static void setup_nvic(void)
 
     nvic_init((uint32)VECT_TAB_ADDR, 0);
 
-    /* Roger Clark. We now control nvic vector table in boards.txt using the build.vect paramater
-    #ifdef VECT_TAB_FLASH
-        nvic_init(USER_ADDR_ROM, 0);
-    #elif defined VECT_TAB_RAM
-        nvic_init(USER_ADDR_RAM, 0);
-    #elif defined VECT_TAB_BASE
-        nvic_init((uint32)0x08000000, 0);
-    #elif defined VECT_TAB_ADDR
-        // A numerically supplied value
-        nvic_init((uint32)VECT_TAB_ADDR, 0);
-    #else
-        // Use the __text_start__ value from the linker script; this
-        // should be the start of the vector table.
-        nvic_init((uint32)&__text_start__, 0);
-    #endif
-
-    */
+/* Roger Clark. We now control nvic vector table in boards.txt using the build.vect paramater
+ */
+#ifdef VECT_TAB_FLASH
+    nvic_init(USER_ADDR_ROM, 0);
+#elif defined VECT_TAB_RAM
+    nvic_init(USER_ADDR_RAM, 0);
+#elif defined VECT_TAB_BASE
+    nvic_init((uint32)0x08000000, 0);
+#elif defined VECT_TAB_ADDR
+    // A numerically supplied value
+    nvic_init((uint32)VECT_TAB_ADDR, 0);
+#else
+    // Use the __text_start__ value from the linker script; this
+    // should be the start of the vector table.
+    nvic_init((uint32)&__text_start__, 0);
+#endif
 }
 
 static void adc_default_config(adc_dev *dev)

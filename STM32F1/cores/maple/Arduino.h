@@ -39,6 +39,6 @@ void yield(void);
 }
 #endif // __cplusplus
 
-#include "variant.h"
+// #include "variant.h"
 
 #endif
