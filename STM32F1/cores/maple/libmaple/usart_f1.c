@@ -204,7 +204,7 @@ __weak void __irq_usart1(void) {
     usart_irq(&usart1_rb, &usart1_wb, USART1_BASE);
 }
 
-__weak void __irq_usart2(void) {
+__weak void USART2(void) {
     // usart_irq(&usart2_rb, &usart2_wb, USART2_BASE);
 }
 

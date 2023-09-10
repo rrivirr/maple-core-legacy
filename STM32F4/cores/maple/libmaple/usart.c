@@ -286,7 +286,7 @@ void __irq_usart1(void) {
     usart_irq(USART1);
 }
 
-void __irq_usart2(void) {
+void USART2(void) {
     usart_irq(USART2);
 }
 
