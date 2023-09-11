@@ -30,7 +30,7 @@ discovery_f407.build.board=discovery_f4
 discovery_f407.build.vect_flags=-DUSER_ADDR_ROM=0x08000000
 
 discovery_f407.menu.usb_cfg.usb_serial=USB serial (CDC)
-discovery_f407.menu.usb_cfg.usb_serial.build.cpu_flags=-DSERIAL_USB
+discovery_f407.menu.usb_cfg.usb_serial.build.cpu_flags= 
 discovery_f407.menu.usb_cfg.usb_nc=USB inactive
 discovery_f407.menu.usb_cfg.usb_nc.build.cpu_flags=-DUSB_NC
 discovery_f407.menu.usb_cfg.usb_msc=USB Mass Storage (MSC)
@@ -83,7 +83,7 @@ blackpill_f401.build.board=blackpill_f401
 blackpill_f401.build.vect_flags=-DUSER_ADDR_ROM=0x08000000
 
 blackpill_f401.menu.usb_cfg.usb_serial=USB serial (CDC)
-blackpill_f401.menu.usb_cfg.usb_serial.build.cpu_flags=-DSERIAL_USB
+blackpill_f401.menu.usb_cfg.usb_serial.build.cpu_flags= 
 blackpill_f401.menu.usb_cfg.usb_nc=USB inactive
 blackpill_f401.menu.usb_cfg.usb_nc.build.cpu_flags=-DUSB_NC
 blackpill_f401.menu.usb_cfg.usb_msc=USB Mass Storage (MSC)
@@ -136,7 +136,7 @@ disco_f411.build.board=disco_f411
 disco_f411.build.vect_flags=-DUSER_ADDR_ROM=0x08000000
 
 disco_f411.menu.usb_cfg.usb_serial=USB serial (CDC)
-disco_f411.menu.usb_cfg.usb_serial.build.cpu_flags=-DSERIAL_USB
+disco_f411.menu.usb_cfg.usb_serial.build.cpu_flags= 
 disco_f411.menu.usb_cfg.usb_nc=USB inactive
 disco_f411.menu.usb_cfg.usb_nc.build.cpu_flags=-DUSB_NC
 disco_f411.menu.usb_cfg.usb_msc=USB Mass Storage (MSC)
@@ -188,7 +188,7 @@ generic_f407v.build.error_led_pin=PA7
 generic_f407v.build.board=generic_f407v
 
 generic_f407v.menu.usb_cfg.usb_serial=USB serial (CDC)
-generic_f407v.menu.usb_cfg.usb_serial.build.cpu_flags=-DSERIAL_USB
+generic_f407v.menu.usb_cfg.usb_serial.build.cpu_flags= 
 generic_f407v.menu.usb_cfg.usb_nc=USB inactive
 generic_f407v.menu.usb_cfg.usb_nc.build.cpu_flags=-DUSB_NC
 generic_f407v.menu.usb_cfg.usb_msc=USB Mass Storage (MSC)
@@ -255,7 +255,7 @@ generic_f407v_mini.build.error_led_pin=PB9
 generic_f407v_mini.build.board=generic_f407v_mini
 
 generic_f407v_mini.menu.usb_cfg.usb_serial=USB serial (CDC)
-generic_f407v_mini.menu.usb_cfg.usb_serial.build.cpu_flags=-DSERIAL_USB
+generic_f407v_mini.menu.usb_cfg.usb_serial.build.cpu_flags= 
 generic_f407v_mini.menu.usb_cfg.usb_nc=USB inactive
 generic_f407v_mini.menu.usb_cfg.usb_nc.build.cpu_flags=-DUSB_NC
 generic_f407v_mini.menu.usb_cfg.usb_msc=USB Mass Storage (MSC)
@@ -318,7 +318,7 @@ arch_max.build.error_led_pin=PB3
 arch_max.build.board=arch_max
 
 arch_max.menu.usb_cfg.usb_serial=USB serial (CDC)
-arch_max.menu.usb_cfg.usb_serial.build.cpu_flags=-DSERIAL_USB
+arch_max.menu.usb_cfg.usb_serial.build.cpu_flags= 
 arch_max.menu.usb_cfg.usb_nc=USB inactive
 arch_max.menu.usb_cfg.usb_nc.build.cpu_flags=-DUSB_NC
 arch_max.menu.usb_cfg.usb_msc=USB Mass Storage (MSC)

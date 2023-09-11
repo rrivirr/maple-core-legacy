@@ -36,8 +36,8 @@
 #include <libmaple/timer.h>
 
 /* Roger Clark. Added next to includes for changes to Serial */
-#include <libmaple/usart.h>
-#include <HardwareSerial.h>
+// #include <libmaple/usart.h>
+// #include <HardwareSerial.h>
 
 #include <wirish_debug.h>
 #include <wirish_types.h>
@@ -121,8 +121,8 @@ extern const uint8 boardUsedPins[BOARD_NR_USED_PINS] __FLASH__ = {
  * As its a Medium Density device, it only has 3 hardware serial devices. 
  */							
  
-DEFINE_HWSERIAL(Serial1, 1);
-DEFINE_HWSERIAL(Serial2, 2);
-DEFINE_HWSERIAL(Serial3, 3);
+// DEFINE_HWSERIAL(Serial1, 1);
+// DEFINE_HWSERIAL(Serial2, 2);
+// DEFINE_HWSERIAL(Serial3, 3);
 		
 	

@@ -34,8 +34,8 @@
 #include <board/board.h>
 
 /* Roger Clark. Added next to includes for changes to Serial */
-#include <libmaple/usart.h>
-#include <HardwareSerial.h>
+// #include <libmaple/usart.h>
+// #include <HardwareSerial.h>
 
 #include <libmaple/gpio.h>
 #include <libmaple/timer.h>
@@ -112,6 +112,6 @@ extern const uint8 boardUsedPins[BOARD_NR_USED_PINS] __FLASH__ = {
  * Note. I think a microduino is a Maple mini clone in another form factor,  
  */	
 
-DEFINE_HWSERIAL(Serial1, 1);
-DEFINE_HWSERIAL(Serial2, 2);
-DEFINE_HWSERIAL(Serial3, 3);
+// DEFINE_HWSERIAL(Serial1, 1);
+// DEFINE_HWSERIAL(Serial2, 2);
+// DEFINE_HWSERIAL(Serial3, 3);

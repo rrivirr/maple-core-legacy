@@ -22,7 +22,7 @@
  * ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
-*****************************************************************************/
+ *****************************************************************************/
 
 /**
  * @file wirish/stm32f1/boards_setup.cpp
@@ -55,8 +55,10 @@
 #endif
 #endif
 
-namespace wirish {
-    namespace priv {
+namespace wirish
+{
+    namespace priv
+    {
 
         static stm32f1_rcc_pll_data pll_data = {BOARD_RCC_PLLMUL};
 #if NUCLEO_HSE_CRYSTAL
@@ -67,33 +69,37 @@ namespace wirish {
         __weak adc_prescaler w_adc_pre = ADC_PRE_PCLK2_DIV_6;
         __weak adc_smp_rate w_adc_smp = ADC_SMPR_55_5;
 
-        __weak void board_reset_pll(void) {
+        __weak void board_reset_pll(void)
+        {
             // TODO
         }
 
-        __weak void board_setup_clock_prescalers(void) {
+        __weak void board_setup_clock_prescalers(void)
+        {
             rcc_set_prescaler(RCC_PRESCALER_AHB, RCC_AHB_SYSCLK_DIV_1);
             rcc_set_prescaler(RCC_PRESCALER_APB1, RCC_APB1_HCLK_DIV_2);
             rcc_set_prescaler(RCC_PRESCALER_APB2, RCC_APB2_HCLK_DIV_1);
-			rcc_clk_disable(RCC_USB);
-			#if F_CPU == 72000000
-			rcc_set_prescaler(RCC_PRESCALER_USB, RCC_USB_SYSCLK_DIV_1_5);
-			#elif F_CPU == 48000000
-			rcc_set_prescaler(RCC_PRESCALER_USB, RCC_USB_SYSCLK_DIV_1);			
-			#endif	
+            rcc_clk_disable(RCC_USB);
+#if F_CPU == 72000000
+            rcc_set_prescaler(RCC_PRESCALER_USB, RCC_USB_SYSCLK_DIV_1_5);
+#elif F_CPU == 48000000
+            rcc_set_prescaler(RCC_PRESCALER_USB, RCC_USB_SYSCLK_DIV_1);
+#endif
         }
 
-        __weak void board_setup_gpio(void) {
+        __weak void board_setup_gpio(void)
+        {
             gpio_init_all();
         }
 
-        __weak void board_setup_usb(void) {
-#ifdef SERIAL_USB 
-			// Serial.begin();// Roger Clark. Changed SerialUSB to Serial for Arduino sketch compatibility
+        __weak void board_setup_usb(void){
+#ifdef SERIAL_USB
+        // Serial.begin();// Roger Clark. Changed SerialUSB to Serial for Arduino sketch compatibility
 #endif
-		}
+        }
 
-        __weak void series_init(void) {
+        __weak void series_init(void)
+        {
             // Initialize AFIO here, too, so peripheral remaps and external
             // interrupts work out of the box.
             afio_init();

@@ -33,8 +33,8 @@ cSRCS_$(d) := adc.c                    \
               syscalls.c               \
               systick.c                \
               timer.c                  \
-              usart.c                  \
               util.c                   
+            #   usart.c                  \
 
 	V=1
 	cSRCS_$(d) += \

@@ -62,7 +62,7 @@ __stm32_vector_table:
 	.long	__irq_spi1
 	.long	__irq_spi2
 	.long	__irq_usart1
-	.long	__irq_usart2
+	.long	USART2
 	.long	__irq_usart3
 	.long	__irq_exti15_10
 	.long	__irq_rtcalarm

@@ -45,9 +45,9 @@
 #include "wirish_debug.h"
 #include "wirish_math.h"
 #include <wirish_constants.h>
-#include <libmaple/HardwareSerial.h>
+// #include <libmaple/HardwareSerial.h>
 #include "HardwareTimer.h"
-#include "usb_serial.h"
+// #include "usb_serial.h"
 
 /* Arduino wiring macros and bit defines  */
 #define HIGH 0x1

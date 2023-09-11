@@ -48,8 +48,8 @@
 #include <libmaple/timer.h>
 
 /* Roger Clark. Added next to includes for changes to Serial */
-#include <libmaple/usart.h>
-#include <HardwareSerial.h>
+// #include <libmaple/usart.h>
+// #include <HardwareSerial.h>
 
 
 #include <wirish_debug.h>
@@ -248,6 +248,6 @@ MOSI alternate functions on the GPIO ports.
  * Maps to which hardware serial port on the microprocessor
  */
 						
-DEFINE_HWSERIAL(Serial1, 1);
-DEFINE_HWSERIAL(Serial2, 2);
-DEFINE_HWSERIAL(Serial3, 3);
+// DEFINE_HWSERIAL(Serial1, 1);
+// DEFINE_HWSERIAL(Serial2, 2);
+// DEFINE_HWSERIAL(Serial3, 3);

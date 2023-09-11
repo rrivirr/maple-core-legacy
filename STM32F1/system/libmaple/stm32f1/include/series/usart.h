@@ -62,7 +62,7 @@ struct usart_reg_map;
 
 struct usart_dev;
 extern struct usart_dev *USART1;
-extern struct usart_dev *USART2;
+// extern struct usart_dev *USART2;
 extern struct usart_dev *USART3;
 #ifdef STM32_HIGH_DENSITY
 extern struct usart_dev *UART4;

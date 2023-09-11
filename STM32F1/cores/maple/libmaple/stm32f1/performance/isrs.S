@@ -192,9 +192,9 @@ __default_handler:
 //	.weak	__irq_usart1                                // __irq_usart1() defined in STM32F1/cores/maple/libmaple/usart_f1.c
 //	.globl	__irq_usart1
 //	.set	__irq_usart1, __default_handler
-//	.weak	__irq_usart2                                // __irq_usart2() defined in STM32F1/cores/maple/libmaple/usart_f1.c
-//	.globl	__irq_usart2
-//	.set	__irq_usart2, __default_handler
+//	.weak	USART2                                // USART2() defined in STM32F1/cores/maple/libmaple/usart_f1.c
+//	.globl	USART2
+//	.set	USART2, __default_handler
 //	.weak	__irq_usart3                                // __irq_usart3() defined in STM32F1/cores/maple/libmaple/usart_f1.c
 //	.globl	__irq_usart3
 //	.set	__irq_usart3, __default_handler

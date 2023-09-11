@@ -34,8 +34,8 @@
 
 
 /* Roger Clark. Added next to includes for changes to Serial */
-#include <libmaple/usart.h>
-#include <HardwareSerial.h>
+// #include <libmaple/usart.h>
+// #include <HardwareSerial.h>
 
 #include <wirish_types.h> // For stm32_pin_info and its contents
                                  // (these go into PIN_MAP).
@@ -125,9 +125,9 @@ extern const stm32_pin_info PIN_MAP[BOARD_NR_GPIO_PINS] = {
 	{&gpioc, &timer8, NULL,  7, 2, ADCx}, /* PC7 */
     {&gpioc, &timer8, NULL,  8, 3, ADCx}, /* PC8 */
     {&gpioc, &timer8, NULL,  9, 4, ADCx}, /* PC9 */
-    {&gpioc,   NULL, NULL, 10, 0, ADCx}, /* PC10 UART4_TX/SDIO_D2 */
-    {&gpioc,   NULL, NULL, 11, 0, ADCx}, /* PC11 UART4_RX/SDIO_D3 */
-    {&gpioc,   NULL, NULL, 12, 0, ADCx}, /* PC12 UART5_TX/SDIO_CK */	
+    // {&gpioc,   NULL, NULL, 10, 0, ADCx}, /* PC10 UART4_TX/SDIO_D2 */
+    // {&gpioc,   NULL, NULL, 11, 0, ADCx}, /* PC11 UART4_RX/SDIO_D3 */
+    // {&gpioc,   NULL, NULL, 12, 0, ADCx}, /* PC12 UART5_TX/SDIO_CK */	
     {&gpioc,   NULL, NULL, 13, 0, ADCx}, /* PC13 TAMPER-RTC */
     {&gpioc,   NULL, NULL, 14, 0, ADCx}, /* PC14 OSC32_IN */
     {&gpioc,   NULL, NULL, 15, 0, ADCx}, /* PC15 OSC32_OUT */
@@ -153,9 +153,9 @@ extern const uint8 boardUsedPins[BOARD_NR_USED_PINS] __FLASH__ = {
     BOARD_JTCK_SWCLK_PIN, BOARD_JTDI_PIN, BOARD_JTDO_PIN, BOARD_NJTRST_PIN
 };
 
-DEFINE_HWSERIAL(Serial1, 1);
-DEFINE_HWSERIAL(Serial2, 2);
-DEFINE_HWSERIAL(Serial3, 3);
-DEFINE_HWSERIAL_UART(Serial4, 4);
-DEFINE_HWSERIAL_UART(Serial5, 5);
+// DEFINE_HWSERIAL(Serial1, 1);
+// DEFINE_HWSERIAL(Serial2, 2);
+// DEFINE_HWSERIAL(Serial3, 3);
+// DEFINE_HWSERIAL_UART(Serial4, 4);
+// DEFINE_HWSERIAL_UART(Serial5, 5);
 

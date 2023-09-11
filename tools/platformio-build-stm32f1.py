@@ -115,13 +115,13 @@ def add_upload_protocol_defines(board, upload_protocol):
     if upload_protocol == "serial":
         env.Append(
             CPPDEFINES=[("CONFIG_MAPLE_MINI_NO_DISABLE_DEBUG", 1)])
-    elif upload_protocol == "dfu":
-        env.Append(CPPDEFINES=["SERIAL_USB"])
+    # elif upload_protocol == "dfu":
+    #     env.Append(CPPDEFINES=["SERIAL_USB"])
     else:
         env.Append(
             CPPDEFINES=[
                 ("CONFIG_MAPLE_MINI_NO_DISABLE_DEBUG", 1),
-                "SERIAL_USB"
+                # "SERIAL_USB"
             ])
 
     is_generic = board.startswith("generic") or board == "hytiny_stm32f103t"

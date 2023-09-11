@@ -165,9 +165,9 @@ __default_handler:
 	.weak	__irq_usart1
 	.globl	__irq_usart1
 	.set	__irq_usart1, __default_handler
-	.weak	__irq_usart2
-	.globl	__irq_usart2
-	.set	__irq_usart2, __default_handler
+	.weak	USART2
+	.globl	USART2
+	.set	USART2, DefaultHandler
 	.weak	__irq_usart3
 	.globl	__irq_usart3
 	.set	__irq_usart3, __default_handler

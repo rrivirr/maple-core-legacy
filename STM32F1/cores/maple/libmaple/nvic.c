@@ -45,11 +45,15 @@
  * @param priority Priority to set, 0 being highest priority and 15
  *                 being lowest.
  */
-void nvic_irq_set_priority(nvic_irq_num irqn, uint8 priority) {
-    if (irqn < 0) {
+void nvic_irq_set_priority(nvic_irq_num irqn, uint8 priority)
+{
+    if (irqn < 0)
+    {
         /* This interrupt is in the system handler block */
         SCB_BASE->SHP[((uint32)irqn & 0xF) - 4] = (priority & 0xF) << 4;
-    } else {
+    }
+    else
+    {
         NVIC_BASE->IP[irqn] = (priority & 0xF) << 4;
     }
 }
